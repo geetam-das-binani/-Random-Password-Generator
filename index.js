@@ -12,6 +12,7 @@ const SYMBOLS_CHAR_CODES = arrayFromLowToHigh(33, 47)
     .concat(arrayFromLowToHigh(58, 64))
     .concat(arrayFromLowToHigh(91, 96))
     .concat(arrayFromLowToHigh(123, 126));
+console.log(UPPERCASE_CHAR_CODES.concat(LOWERCASE_CHAR_CODES))
 
 const syncCharacterAmount = (e) => {
     e.preventDefault();
@@ -39,14 +40,7 @@ const generatePassword = (characterAmount, includeNumbers, includeUppercase, inc
     for (let i = 0; i < characterAmount; i++) {
 
         const charactercode = charcodes[Math.floor(Math.random() * charcodes.length)]
-        console.log( charcodes[Math.floor(Math.random() * charcodes.length)])
-        console.log( [Math.floor(Math.random() * charcodes.length)])
-        console.log( (Math.random() * charcodes.length))
-        console.log(Math.random())
-        console.log(charcodes[0,1,2])
-     
-
-        passwordcharacters.push(String.fromCharCode(charactercode))
+       passwordcharacters.push(String.fromCharCode(charactercode))
     }
 
     return passwordcharacters.join('')
